@@ -7,7 +7,7 @@
     "start:prod": "node ./src/index.js",
     "start:dev": "nodemon ./src/index.js",
     "build:dev": "npx webpack --config webpack.dev-config.js",
-    "build:prod": "npx webpack --config webpack.prod-config.js"
+    "build:prod": "npx webpack --config webpack.config.js"
   },
   "keywords": [
     "game"
@@ -15,6 +15,9 @@
   "author": "evgenii",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
     "nodemon": "^2.0.21",
     "webpack": "^5.76.1",
     "webpack-cli": "^5.0.1"
