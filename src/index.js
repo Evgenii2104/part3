@@ -7,3 +7,7 @@ const items = [
 
 console.log(_.uniqBy(items, 'name'))
 console.log('new prodgekt')
+
+const { characters, alive } = require('./app.js')
+
+console.log(characters, alive)
