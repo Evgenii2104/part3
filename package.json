@@ -7,7 +7,8 @@
     "start:prod": "node ./src/index.js",
     "start:dev": "nodemon ./src/index.js",
     "build:dev": "npx webpack --config webpack.dev-config.js",
-    "build:prod": "npx webpack --config webpack.config.js"
+    "build:prod": "npx webpack --config webpack.config.js",
+    "lint": "eslint ."
   },
   "keywords": [
     "game"
@@ -18,6 +19,9 @@
     "@babel/core": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
     "babel-loader": "^9.1.2",
+    "eslint": "^8.36.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
     "nodemon": "^2.0.21",
     "webpack": "^5.76.1",
     "webpack-cli": "^5.0.1"

@@ -8,3 +8,10 @@ const characters = [
   const alive = characters.filter(item => item.health > 0);
 
 module.exports = { characters, alive }
+
+console.log('app worked')
+
+const game = new Game();
+game.start();
+
+export {Game, GameSavingData, readGameSaving, writeGameSaving}

@@ -11,3 +11,5 @@ console.log('new prodgekt')
 const { characters, alive } = require('./app.js')
 
 console.log(characters, alive)
+
+const { loadGame, saveGame } = require('./game.js')
