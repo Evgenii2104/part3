@@ -1,4 +1,4 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path');
 
 module.exports = {
@@ -7,10 +7,23 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  plugins: [new HtmlWebpackPlugin({
-    template:"./src/index.html",
-    filename:"./index.html"
-  })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      hash: true,
+            title: 'My Awesome application',
+            myPageHeader: 'Hello World',
+            template: './src/index.html',
+            filename: './dist/main.html' 
+    })
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
+    ],
+  },
   module: {
     rules: [
       {
@@ -42,3 +55,4 @@ module.exports = {
     ],
   },
 };
+

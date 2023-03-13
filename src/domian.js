@@ -1,6 +1,5 @@
-import { characters } from "./app";
 
-class Character {
+
+export default class Character {
 }
 
-export default characters
