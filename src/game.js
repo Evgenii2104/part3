@@ -1,4 +1,4 @@
- class Game {
+export default class Game {
     start() {
       console.log('game started');
     }
@@ -9,10 +9,11 @@
   
   function readGameSaving() {
   }
-  
+
   function writeGameSaving() {
   }
 
   import Character from "./domian";
 
-  export default { Game, GameSavingData, readGameSaving, writeGameSaving }
+  //export default  class Game {}; 
+  GameSavingData; readGameSaving; writeGameSaving; 

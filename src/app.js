@@ -11,12 +11,13 @@ module.exports = { characters, alive }
 
 console.log('app worked')
 
-const game = new Game();
-game.start();
+import Game from "./game"
 
 import {
-  Game, 
   GameSavingData, 
   readGameSaving as loadGame, 
   writeGameSaving as saveGame
-} from "./game"
+ } from "./game"
+
+ const game = new Game();
+game.start();

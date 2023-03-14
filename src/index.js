@@ -12,6 +12,6 @@ const { characters, alive } = require('./app.js')
 
 console.log(characters, alive)
 
-const { loadGame, saveGame } = require('./game.js')
+//const { loadGame, saveGame } = require('./game.js')
 
-import "./style.css";
+//import "./style.css";

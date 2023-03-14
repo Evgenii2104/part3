@@ -1,5 +1,7 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: './src/index.js',
@@ -8,24 +10,15 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      hash: true,
-            title: 'My Awesome application',
-            myPageHeader: 'Hello World',
-            template: './src/index.html',
-            filename: './dist/main.html' 
-    })
+    new HtmlWebpackPlugin(),
+    new MiniCssExtractPlugin()
   ],
   module: {
     rules: [
       {
-        test: /\.html$/i,
-        loader: "html-loader",
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
-    ],
-  },
-  module: {
-    rules: [
       {
         test: /\.m?js$/,
         exclude: /node_modules/,
@@ -39,20 +32,9 @@ module.exports = {
         }
       }
     ]
-  }
-};
-
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
-module.exports = {
-  plugins: [new MiniCssExtractPlugin()],
-  module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
-      },
-    ],
   },
+  mode: 'production'
 };
+
+
 

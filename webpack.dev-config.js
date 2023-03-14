@@ -6,5 +6,5 @@ module.exports = {
     filename: 'bund.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  node: 'development'
+  mode: 'development'
 };
